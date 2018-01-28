@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Messages View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="MessagesViewController" customModule="imessageExt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main.png" translatesAutoresizingMaskIntoConstraints="NO" id="RbF-fD-wAF">
+                                <rect key="frame" x="100" y="265.5" width="121" height="136.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="42S-de-rMI"/>
+                                    <constraint firstAttribute="width" constant="121" id="WeZ-pv-Uex"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kE1-d5-r9e">
+                                <rect key="frame" x="139" y="299.5" width="42" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9Nj-f6-jkc"/>
+                                    <constraint firstAttribute="width" constant="42" id="zI3-jP-Tib"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZOa-4B-kyU">
+                                <rect key="frame" x="4" y="364" width="312" height="81"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="26"/>
+                                <state key="normal" title="Instant Cheer Up Here">
+                                    <color key="titleColor" red="0.9176911485" green="0.4093659006" blue="0.79153533919999997" alpha="0.95999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="button:" destination="ObA-dk-sSI" eventType="touchUpInside" id="FE7-rQ-yi2"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VJJ-ea-p8K">
+                                <rect key="frame" x="52" y="152" width="143" height="139"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3hl-RN-fqT">
+                                        <rect key="frame" x="0.0" y="0.0" width="143" height="139"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oVo-Fi-ey5">
+                                                <rect key="frame" x="0.0" y="0.0" width="143" height="139"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZOa-4B-kyU" firstAttribute="centerY" secondItem="zMn-AG-sqS" secondAttribute="centerY" id="4h2-9j-d3c"/>
+                            <constraint firstItem="kE1-d5-r9e" firstAttribute="top" secondItem="VJJ-ea-p8K" secondAttribute="bottom" constant="56" id="C26-9q-u70"/>
+                            <constraint firstItem="ZOa-4B-kyU" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="ESe-Mg-fCS"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="trailing" secondItem="RbF-fD-wAF" secondAttribute="trailing" constant="99" id="Fgx-MP-zN6"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="RbF-fD-wAF" secondAttribute="bottom" constant="126" id="QJh-ce-TpC"/>
+                            <constraint firstItem="RbF-fD-wAF" firstAttribute="top" secondItem="VJJ-ea-p8K" secondAttribute="bottom" constant="22" id="StE-0y-JRN"/>
+                            <constraint firstItem="ZOa-4B-kyU" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="VIU-4Q-1S8"/>
+                            <constraint firstItem="kE1-d5-r9e" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="WE7-TW-98N"/>
+                            <constraint firstItem="ZOa-4B-kyU" firstAttribute="centerY" secondItem="zMn-AG-sqS" secondAttribute="centerY" id="ecE-UK-TKw"/>
+                            <constraint firstItem="ZOa-4B-kyU" firstAttribute="centerY" secondItem="zMn-AG-sqS" secondAttribute="centerY" id="kQd-zK-ciu"/>
+                            <constraint firstItem="ZOa-4B-kyU" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="knz-Qj-Mf6"/>
+                            <constraint firstItem="LDy-ih-0nr" firstAttribute="bottom" secondItem="kE1-d5-r9e" secondAttribute="bottom" constant="208" id="mcd-dZ-xYc"/>
+                            <constraint firstItem="RbF-fD-wAF" firstAttribute="leading" secondItem="LDy-ih-0nr" secondAttribute="leading" constant="100" id="wwr-Qh-WaX"/>
+                            <constraint firstItem="ZOa-4B-kyU" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="xDF-NY-7D1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LDy-ih-0nr"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="528"/>
+                    <connections>
+                        <outlet property="label" destination="kE1-d5-r9e" id="baQ-O7-g5i"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-99.200000000000003" y="93.553223388305852"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="main.png" width="143" height="139"/>
+    </resources>
+</document>
